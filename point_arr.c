@@ -31,11 +31,11 @@ void test() {
 	int *p, (*pa)[4];
 	p = &(a[1][2]);
 	pa = a;
-	printf("A=%d\n", p-a[1]);
-	printf("B=%d\n", *(p+5));
-	printf("C=%d\n", (*(pa+1))[3]);
-	printf("D=%d\n", **(pa+1));
-	printf("E=%d\n", *(pa[1]+1));
+	printf("A=%d\n", p-a[1]); // a[1]的地址为第二行的首元素地址, p为第2行第3列元素地址
+	printf("B=%d\n", *(p+5)); // p向后移动5位
+	printf("C=%d\n", (*(pa+1))[3]); // a[1][3]
+	printf("D=%d\n", **(pa+1)); // 取第二行首元素
+	printf("E=%d\n", *(pa[1]+1)); // a[1][1]
 }
 
 int main(int argc, char *argv[]) {

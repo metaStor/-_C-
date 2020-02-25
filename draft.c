@@ -1,5 +1,6 @@
 #include "stdio.h"
 #include "string.h"
+#include "math.h"
 
 void func(int*);
 void func1(int*);
@@ -45,6 +46,14 @@ void test_float() {
 	free(val);
 }
 
+void fun(int k) {
+	static int a = 10;
+	int b = 1;
+	b++;
+	printf("%d+%d+%d=%d\n", a, b, k, a+b+k);
+	a+=5;
+}
+
 int main() {
 	/*
 	struct node { int a; int b; int c;};
@@ -66,7 +75,8 @@ int main() {
 	p[1](&a, b);
 	printf("%d\t%d\n", a, b);
 	*/
-	test_float();
+	//test_float();
+	for (int i=1;i<=3;++i) fun(i);
 	return 0;
 }
 

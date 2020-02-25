@@ -28,7 +28,7 @@ void open(FILE *&fp, char *file) {
 }
 
 /*
-FILE* open(FILE *&fp, char *file) {
+FILE* open(FILE *fp, char *file) {
 	if ((fp = fopen(file, "a+")) == NULL) {
 		printf("File can not be opend!\n");
 		return NULL;
